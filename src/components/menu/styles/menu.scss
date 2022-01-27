@@ -1,0 +1,95 @@
+@import "../../../styles/mixins/keyframes.scss";
+@import "../../../styles/utils/responsive.scss";
+
+.menu {
+
+  position: absolute;
+  top: 100%;
+  right: 0%;
+
+  
+  &_isOpening {
+    @include animation('right-to-left .7s ease-in-out 1');
+  }
+
+  &_isClosing {
+    @include animation('left-to-right .7s ease-in-out 1');
+  }
+
+  &__wrapper {
+    max-width: 100%;
+    max-height: 100%;
+
+    width: 30vw;
+    height: 100vh;
+
+    background-color: orange;
+
+    padding: 5.5rem;
+
+    @include media(">medium-desktop", "<=desktop") {
+      width: 40vw;;
+    }
+
+    @include media(">tablet", "<=medium-desktop") {
+      width: 55vw;;
+    }
+
+    @include media(">small-tablet", "<=tablet") {
+      width: 60vw;
+    }
+
+    @include media(">=small-phone", "<=small-tablet") {
+      width: 100vw;
+    }
+
+    @include media("<=small-phone") {
+      width: 100vw;
+    }
+  }
+
+  &__list {
+    display: grid;
+    place-items: center;
+
+    text-transform: uppercase;
+  }
+
+  &__list-title {
+    font-size: 2rem;
+    width: 100%;
+    text-align: left;
+
+
+  }
+
+  &__list-title-text {
+    position: relative;
+    &::after {
+      border-top: 2px solid;
+      margin-left: 8px;
+      position: absolute;
+      top: 55%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      width: 36px;
+    }
+  }
+
+  &__list-item {
+    font-size: 5rem;
+    line-height: 2.15;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+
+    @include media("<=xs-phone") {
+     font-size: 3.1rem;
+    }
+  }
+
+  &__category-text {
+
+  }
+}

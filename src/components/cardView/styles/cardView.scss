@@ -1,0 +1,161 @@
+@import "../../../styles/mixins/keyframes";
+@import "../../../styles/utils/responsive";
+
+.cardView {
+
+ 
+
+  &__portal {
+
+    position: absolute;
+    left: 0%;
+    z-index: 10;
+
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    max-height: 100%;
+
+    background: #202c37;
+    color: white;
+    z-index: 2;
+    overflow-y: scroll;
+    &_isClosed{
+      @include animation('slide-down .7s ease-in-out 1');
+    }
+  
+    &_isOpen{
+      @include animation('slide-up .7s ease-in-out 1');    
+    }
+
+  
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+
+    padding: 5%;
+
+    position: relative;
+    width: 100vw;
+    max-width: 100%;
+
+
+    @include media("<medium-desktop") {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__back-btn {
+    cursor: pointer;
+    padding: 0.5em 1.5em;
+    border-radius: 5px;
+
+    height: max-content;
+    width: max-content;
+
+    background-color: #2b3945;
+    border: none;
+
+
+    position: absolute;
+    top: 2%;
+    left: 5%;
+  }
+
+  &__back-text {
+    color: white;
+    font-size: 1.6rem;
+  }
+
+  &__image-container {
+    width: fit-content;
+    height: fit-content;
+
+    margin-right: 10rem;
+    margin-top: 7rem;
+
+    @include media("<medium-desktop") {
+      width: 100%;
+      height: -moz-fit-content;
+      height: fit-content;
+      margin-right: 10rem;
+      margin-top: 7rem;
+      display: grid;
+      place-items: center;
+      margin-bottom: 7rem;
+    }
+  }
+
+
+  &__image {
+    max-width: 500px;
+    max-height: 500px;
+    min-width: 300px;
+    width: calc(100vw / 3);
+    @include media("<medium-desktop") {
+      width: 100%;
+    }
+
+  }
+
+  &__info-container {
+  }
+
+  &__title {
+    font-size: 4rem;
+
+    margin-bottom: calc(3rem * 0.5);
+  }
+
+  &__list-container {
+
+    display: flex;
+    flex-direction: row;
+    
+    width: calc(100vw / 2);
+    max-width:  80vw;;
+
+    padding: 0 20px 0 0;
+
+    align-items: flex-start;
+    justify-content: space-between;
+    @include media("<medium-desktop") {
+      width: 100%;
+      padding: 0;
+    }
+
+  }
+
+  &__list {
+
+
+
+    &_isLeft {
+
+    }
+
+    &_isRight {
+
+    }
+  }
+
+  &__list-item {
+    font-size: 2rem;
+    line-height: 2.15;
+  }
+
+  &__descripiton-container {
+    width: calc(100% - 20px);
+    margin-top: calc(3rem);
+  }
+
+  &__description-text {
+    font-size: 1.8rem;
+    line-height: 1.7;
+  }
+}
+
+
