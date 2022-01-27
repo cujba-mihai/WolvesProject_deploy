@@ -26,20 +26,16 @@ const WrappedComponent = (props) => {
             ? wolves.map((e, i) => <Card key={i} images={e.images} />)
             : null}
 
-          {isError ? (
-            <>
-              <h3>`Oops! An error occured. ☹ `</h3>
-              <h2 style={{ fontSize: '3rem', width: 'fit-content' }}>
-                `${isError.message}`
-              </h2>
-            </>
-          ) : null}
+          {isError ? <h3>Oops! An error occured. ☹</h3> : null}
         </div>
       </div>
     </main>
   );
 };
 
-const Hero = withFetch(WrappedComponent, './api/wolves.json');
+const Hero = withFetch(
+  WrappedComponent,
+  'https://cujba-mihai.github.io/WolvesProject/api/wolves.json'
+);
 
 export default Hero;

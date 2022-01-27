@@ -1,0 +1,102 @@
+@import "../../../styles/utils/responsive.scss";
+
+.hero {
+
+  &__container {
+    padding-top: 90px;
+    background: black;
+  }
+
+  &__head-container {
+    color: white;
+
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr;
+
+    margin-bottom: 50px;
+  }
+  &__heading {
+    font-size: 5.3rem;
+    letter-spacing: 3px;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  &__subheading {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    font-weight: 400;
+
+    text-align: center;
+    align-self: center;
+
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 187%;
+      left: 48%;
+
+      border-bottom: 4px solid #fc0;
+      width: 60px;
+    }
+
+    &_isPrimary {
+      background-image: linear-gradient(120deg,#fc0,#fc0);
+      background-position: 0 100%;
+      background-repeat: no-repeat;
+      background-size: 100% 0;
+      border-bottom: 2px solid #fc0;
+      text-decoration: none;
+      -webkit-transition: background-size .125s ease-in;
+      -o-transition: background-size .125s ease-in;
+      transition: background-size .125s ease-in;
+
+      cursor: pointer;
+       &:hover {
+        background-size: 100% 100%;
+        color: #000;
+       }
+    }
+  }
+
+  &__cart-container {
+    width: 90vw;
+    max-width: 100%;
+    padding: 1rem 2rem;
+    margin:  auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap:  40px;
+    background: black;
+    place-items: center;
+
+    color: white;
+
+    @include media(">xl-desktop", "<=desktop") {
+      grid-template-columns:  repeat(5, 1fr);
+    }
+
+    @include media(">medium-desktop", "<=xl-desktop") {
+      grid-template-columns:  repeat(4, 1fr);
+    }
+
+    @include media(">tablet", "<=medium-desktop") {
+      grid-template-columns:  repeat(3, 1fr);
+    }
+
+    @include media(">small-tablet", "<=tablet") {
+      grid-template-columns:  repeat(3, 1fr);
+    }
+
+    @include media(">=small-phone", "<=small-tablet") {
+      grid-template-columns:  repeat(2, 1fr);
+    }
+
+    @include media("<=small-phone") {
+      grid-template-columns:  1fr;
+    }
+  }
+}

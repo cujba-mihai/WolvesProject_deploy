@@ -1,0 +1,114 @@
+.card {
+
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+
+  cursor: pointer;
+
+ 
+  
+  &__container {
+    max-width:  30rem;
+    background: white;
+    overflow: hidden;
+  }
+
+  &__image-wrapper {
+    height: 26rem;
+    max-height: 26rem;
+    width: 30rem;
+    display: inline-block;
+    object-fit: cover;
+    overflow: hidden;
+  }
+
+  &__bg-image {
+    object-fit: cover;
+    image-rendering: optimizeQuality;
+    width: 30rem;
+    height: 30rem;
+
+    &:hover {
+      transition: transform 0.25s ease 0s, opacity 0.5s ease 0s;
+      transform: scale(1.2);
+    }
+  }
+
+   
+  &__isLastInRow {
+    box-shadow: 8px 6px orange;
+  }
+
+
+  &__tags {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 1.2rem;
+
+    padding: 1.5rem 2rem 0rem 2rem;
+
+    z-index: 1;
+    position: relative;
+    background: white;
+
+    &_isPrimary {
+      padding: 0;
+      letter-spacing: 0.35em;
+      color: darkgray;
+      font-weight: 700;
+
+      &:hover {
+        text-decoration: underline;
+       text-decoration-thickness: 0.4rem;
+      }
+    }
+
+    &_isSecondary {
+      padding: 0;
+      margin-left: auto;
+      letter-spacing: 0.2em;
+      color: gray;
+      &:hover {
+        text-decoration: underline;
+      text-decoration-thickness: 0.1rem;
+      }
+    }
+  }
+
+  &__description {
+    padding: 3rem 2rem 0rem 2rem;
+    font-size: 2rem;
+    line-height: 20px;
+  }
+
+  &__description-text {
+    color: #000000;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    line-height: 1.2;
+
+    display: inline-block;
+    max-width: 27ch;
+    overflow: hidden;
+    max-height: 7.4rem;
+  }
+
+  &__footer {
+    padding: 3rem 2rem;
+  }
+
+  &__menu-icon {
+    margin-right: 1rem;
+    vertical-align: unset;
+  }
+
+  &__menu-text {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: black;
+  }
+}
