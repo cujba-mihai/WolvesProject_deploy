@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/WolvesProject/static/css/main.ed1c8a2e.css",
+    "main.js": "/WolvesProject/static/js/main.c92c3a56.js",
+    "index.html": "/WolvesProject/index.html",
+    "main.ed1c8a2e.css.map": "/WolvesProject/static/css/main.ed1c8a2e.css.map",
+    "main.c92c3a56.js.map": "/WolvesProject/static/js/main.c92c3a56.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ed1c8a2e.css",
+    "static/js/main.c92c3a56.js"
+  ]
+}

@@ -40,6 +40,6 @@ const WrappedComponent = (props) => {
   );
 };
 
-const Hero = withFetch(WrappedComponent, '../../api/wolves.json');
+const Hero = withFetch(WrappedComponent, './api/wolves.json');
 
 export default Hero;
