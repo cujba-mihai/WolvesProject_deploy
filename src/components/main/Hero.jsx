@@ -35,7 +35,7 @@ const WrappedComponent = (props) => {
 
 const Hero = withFetch(
   WrappedComponent,
-  'https://cujba-mihai.github.io/WolvesProject/api/wolves.json'
+  'https://cujba-mihai.github.io/WolvesProject_deploy/api/wolves.json'
 );
 
 export default Hero;
